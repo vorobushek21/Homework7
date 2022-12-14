@@ -19,19 +19,19 @@ public class Main {
             cash = cash + monthCash;
             month++;
         }
-        System.out.println("Накопления в "+month+" месяце составляют - "+cash);
+        System.out.println("Накопления в " + month + " месяце составляют - " + cash);
     }
 
     public static void task2() {
         System.out.println("Задача 2");
         int i = 0;
-        while (i<10){
+        while (i < 10) {
             i++;
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
         System.out.println();
-        for(i=10;i!=0;i--){
-            System.out.print(i+" ");
+        for (i = 10; i != 0; i--) {
+            System.out.print(i + " ");
         }
         System.out.println();
     }
@@ -42,12 +42,12 @@ public class Main {
         int deathPerThousand = 8;
         int birthPerThousand = 17;
         int year = 1;
-        while (year<=10){
-            int yearRatio = population/1000;
-            int deathPerYear = deathPerThousand*yearRatio;
-            int birthPerYear = birthPerThousand*yearRatio;
-            population = (population+birthPerYear)-deathPerYear;
-            System.out.println("Год - "+year+", численность населения составляет - "+population);
+        while (year <= 10) {
+            int yearRatio = population / 1000;
+            int deathPerYear = deathPerThousand * yearRatio;
+            int birthPerYear = birthPerThousand * yearRatio;
+            population = (population + birthPerYear) - deathPerYear;
+            System.out.println("Год - " + year + ", численность населения составляет - " + population);
             year++;
         }
     }
@@ -57,12 +57,12 @@ public class Main {
         int percent = 7;
         float money = 15_000f;
         int month = 0;
-        while (money<12_000_000){
-            float moneyPerMonth = (money/100)*percent;
-            money = money+moneyPerMonth;
+        while (money < 12_000_000) {
+            float moneyPerMonth = (money / 100) * percent;
+            money = money + moneyPerMonth;
             month++;
         }
-        System.out.println("Месяц - "+month+", накопленная сумма - "+money);
+        System.out.println("Месяц - " + month + ", накопленная сумма - " + money);
     }
 
     public static void task5() {
@@ -70,12 +70,12 @@ public class Main {
         int percent = 7;
         float money = 15_000f;
         int month = 0;
-        while (money<12_000_000){
-            float moneyPerMonth = (money/100)*percent;
-            money = money+moneyPerMonth;
+        while (money < 12_000_000) {
+            float moneyPerMonth = (money / 100) * percent;
+            money = money + moneyPerMonth;
             month++;
-            if (month%6 == 0){
-                System.out.println("Месяц - "+month+", накопленная сумма - "+money);
+            if (month % 6 == 0) {
+                System.out.println("Месяц - " + month + ", накопленная сумма - " + money);
             }
         }
     }
@@ -87,38 +87,29 @@ public class Main {
         int month = 0;
         int year = 9;
         int period = year * 12;
-        while (month<=period){
-            float moneyPerMonth = (money/100)*percent;
-            money = money+moneyPerMonth;
+        while (month <= period) {
+            float moneyPerMonth = (money / 100) * percent;
+            money = money + moneyPerMonth;
             month++;
-            if (month%6 == 0){
-                System.out.println("Прошло полгода, "+month+" месяцев, накопленная сумма - "+money);
+            if (month % 6 == 0) {
+                System.out.println("Прошло полгода, " + month + " месяцев, накопленная сумма - " + money);
             }
         }
     }
 
     public static void task7() {
         System.out.println("Задача 7");
-        int percent = 7;
-        float money = 15_000f;
-        int month = 0;
-        int year = 9;
-        int period = year * 12;
-        while (month<=period){
-            float moneyPerMonth = (money/100)*percent;
-            money = money+moneyPerMonth;
-            month++;
-            if (month%6 == 0){
-                System.out.println("Прошло полгода, "+month+" месяцев, накопленная сумма - "+money);
-            }
+        int friday = 5;
+        for (; friday<=31; friday=friday+7){
+            System.out.println("Сегодня пятница, "+friday+"-е число. Необходимо подготовить отчет");
         }
     }
 
     public static void task8() {
         System.out.println("Задача 8");
         int year = 1822;
-        for (;year<=2122; year++){
-            if (year%79==0){
+        for (; year <= 2122; year++) {
+            if (year % 79 == 0) {
                 System.out.println(year);
             }
         }
